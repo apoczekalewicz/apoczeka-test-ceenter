@@ -1,0 +1,11 @@
+---
+---
+- name: Stop DHCP
+  hosts: all
+  gather_facts: no
+
+- name: Start DHCP
+  service:
+    name: dhcpd
+    state: stopped
+  become: true
