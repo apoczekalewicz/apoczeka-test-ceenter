@@ -3,8 +3,9 @@
   hosts: all
   gather_facts: no
 
-- name: Start DHCP
-  service:
-    name: dhcpd
-    state: started
-  become: true
+  tasks:
+    - name: Start DHCP
+      service:
+        name: dhcpd
+        state: started
+      become: true
